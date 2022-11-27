@@ -1,0 +1,8 @@
+public enum KeyboardType {
+  MEMBRANOUS,
+  MECHANICAL,
+  OPTOMECHANICAL,
+  SCISSOR,
+  ANALOG_OPTICAL,
+  PLUNGER
+}
