@@ -25,6 +25,11 @@
 
 ---
 
+<div>
+  <img src="https://github.com/btd1337/urutau-icons/blob/master/apps/48/postman.svg" title="Postman" alt="Postman" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+</div>
+
 В папке Postman - размещены 3 файла:
 
 Tasks for homework of Postman.txt - задачи по отправке GET и POST запросов на сервер с проведением автотестов по получаемым ответам.
