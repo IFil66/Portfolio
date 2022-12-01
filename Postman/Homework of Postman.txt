@@ -1,6 +1,6 @@
 http://162.55.220.72:5005/first
 
-//3. Проверить, что в body приходит правильный string.
+//3. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® Гў body ГЇГ°ГЁГµГ®Г¤ГЁГІ ГЇГ°Г ГўГЁГ«ГјГ­Г»Г© string.
 var expectedResult = "This is the first responce from server!ss";
 var responseData = pm.response.text();
 console.log(responseData);
@@ -13,39 +13,39 @@ __________________
 
 http://162.55.220.72:5005/user_info_3
 
-// 3. Спарсить response body в json.
+// 3. Г‘ГЇГ Г°Г±ГЁГІГј response body Гў json.
 var responseData = pm.response.json();
 
-//4. Проверить, что name в ответе равно name s request (name вбить руками.)
+//4. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® name Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® name s request (name ГўГЎГЁГІГј Г°ГіГЄГ Г¬ГЁ.)
 pm.test("Name-1", function() {
 pm.expect(responseData.name).to.eql("Vika");
 });
 
-//5. Проверить, что age в ответе равно age s request (age вбить руками.)
+//5. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® age Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® age s request (age ГўГЎГЁГІГј Г°ГіГЄГ Г¬ГЁ.)
 pm.test("Age-1", function() {
 pm.expect(responseData.age).to.eql("32");
 });
 
-//6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
+//6. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® salary Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® salary s request (salary ГўГЎГЁГІГј Г°ГіГЄГ Г¬ГЁ.)
 pm.test("Salary-1", function() {
 let actualResult = +responseData.salary 
 pm.expect(actualResult).to.eql(1000);
 });
 
-//7. Спарсить request.
+//7. Г‘ГЇГ Г°Г±ГЁГІГј request.
 var requestData = request.data;
 
-//8. Проверить, что name в ответе равно name s request (name забрать из request.)
+//8. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® name Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® name s request (name Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Name-2", function() {
 pm.expect(responseData.name).to.eql(requestData.name);
 });
 
-//9. Проверить, что age в ответе равно age s request (age забрать из request.)
+//9. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® age Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® age s request (age Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Age-2", function() {
 pm.expect(responseData.age).to.eql(requestData.age);
 });
 
-//10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+//10. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® salary Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® salary s request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Salary-2", function() {
 let resSalary = +responseData.salary
 let reqSalary = +requestData.salary
@@ -53,10 +53,10 @@ pm.expect(resSalary).to.eql(reqSalary);
 });
 
 
-//11. Вывести в консоль параметр family из response.
+//11. Г‚Г»ГўГҐГ±ГІГЁ Гў ГЄГ®Г­Г±Г®Г«Гј ГЇГ Г°Г Г¬ГҐГІГ° family ГЁГ§ response.
 console.log(responseData.family);
 
-//12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+//12. ГЏГ°Г®ГўГҐГ°ГЁГІГј Г·ГІГ® u_salary_1_5_year Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® salary*4 (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request)
 pm.test("u_salary_1_5_year", function() {
 let reqSalary = +requestData.salary;
 let res_u_salary_1_5_year = +responseData.family.u_salary_1_5_year;
@@ -67,46 +67,46 @@ __________________
 
 http://162.55.220.72:5005/object_info_3
 
-//3. Спарсить response body в json.
+//3. Г‘ГЇГ Г°Г±ГЁГІГј response body Гў json.
 var responseData = pm.response.json();
 
-//4. Спарсить request.
+//4. Г‘ГЇГ Г°Г±ГЁГІГј request.
 var requestData = pm.request.url.query.toObject();
 
-//5. Проверить, что name в ответе равно name s request (name забрать из request.)
+//5. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® name Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® name s request (name Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Name", function(){
     pm.expect(responseData.name).to.eql(requestData.name);
 });
 
-//6. Проверить, что age в ответе равно age s request (age забрать из request.)
+//6. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® age Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® age s request (age Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Age", function(){
     pm.expect(responseData.age).to.eql(requestData.age);
 });
 
-//7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+//7. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® salary Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® salary s request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Salary", function(){
     pm.expect(+responseData.salary).to.eql(+requestData.salary);
 });
 
-//8. Вывести в консоль параметр family из response.
+//8. Г‚Г»ГўГҐГ±ГІГЁ Гў ГЄГ®Г­Г±Г®Г«Гј ГЇГ Г°Г Г¬ГҐГІГ° family ГЁГ§ response.
 console.log(responseData.family);
 
-//9. Проверить, что у параметра dog есть параметры name.
+//9. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® Гі ГЇГ Г°Г Г¬ГҐГІГ°Г  dog ГҐГ±ГІГј ГЇГ Г°Г Г¬ГҐГІГ°Г» name.
 pm.test("Dog's name-1", function () {
     pm.expect(responseData.family.pets.dog).to.property("name");
 });
 
-//10. Проверить, что у параметра dog есть параметры age.
+//10. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® Гі ГЇГ Г°Г Г¬ГҐГІГ°Г  dog ГҐГ±ГІГј ГЇГ Г°Г Г¬ГҐГІГ°Г» age.
 pm.test("Dog's age-1", function () {
     pm.expect(responseData.family.pets.dog).to.property("age");
 });
 
-//11. Проверить, что параметр name имеет значение Luky.
+//11. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° name ГЁГ¬ГҐГҐГІ Г§Г­Г Г·ГҐГ­ГЁГҐ Luky.
 pm.test("Dog's name-2", function () {
     pm.expect(responseData.family.pets.dog.name).to.eql("Luky");
 });
 
-//12. Проверить, что параметр age имеет значение 4.
+//12. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° age ГЁГ¬ГҐГҐГІ Г§Г­Г Г·ГҐГ­ГЁГҐ 4.
 pm.test("Dog's age-2", function () {
     pm.expect(responseData.family.pets.dog.age).to.eql(4);
 });
@@ -115,64 +115,64 @@ __________________
 
 http://162.55.220.72:5005/object_info_4
 
-//3. Спарсить response body в json.
+//3. Г‘ГЇГ Г°Г±ГЁГІГј response body Гў json.
 var responseData = pm.response.json();
 
-//4. Спарсить request.
+//4. Г‘ГЇГ Г°Г±ГЁГІГј request.
 var requestData = pm.request.url.query.toObject();
 
-//5. Проверить, что name в ответе равно name s request (name забрать из request.)
+//5. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® name Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® name s request (name Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Name", function(){
     pm.expect(responseData.name).to.eql(requestData.name);
 });
 
-//6. Проверить, что age в ответе равно age из request (age забрать из request.)
+//6. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® age Гў Г®ГІГўГҐГІГҐ Г°Г ГўГ­Г® age ГЁГ§ request (age Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Age", function(){
     pm.expect(+responseData.age).to.eql(+requestData.age);
 });
 
-//7. Вывести в консоль параметр salary из request.
+//7. Г‚Г»ГўГҐГ±ГІГЁ Гў ГЄГ®Г­Г±Г®Г«Гј ГЇГ Г°Г Г¬ГҐГІГ° salary ГЁГ§ request.
 console.log(requestData.salary);
 
-//8. Вывести в консоль параметр salary из response.
+//8. Г‚Г»ГўГҐГ±ГІГЁ Гў ГЄГ®Г­Г±Г®Г«Гј ГЇГ Г°Г Г¬ГҐГІГ° salary ГЁГ§ response.
 console.log(responseData.salary);
 
-//9. Вывести в консоль 0-й элемент параметра salary из response.
+//9. Г‚Г»ГўГҐГ±ГІГЁ Гў ГЄГ®Г­Г±Г®Г«Гј 0-Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ Г°Г Г¬ГҐГІГ°Г  salary ГЁГ§ response.
 console.log(responseData.salary[0]);
 
-//10. Вывести в консоль 1-й элемент параметра salary параметр salary из response.
+//10. Г‚Г»ГўГҐГ±ГІГЁ Гў ГЄГ®Г­Г±Г®Г«Гј 1-Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ Г°Г Г¬ГҐГІГ°Г  salary ГЇГ Г°Г Г¬ГҐГІГ° salary ГЁГ§ response.
 console.log(responseData.salary[1]);
 
-//11. Вывести в консоль 2-й элемент параметра salary параметр salary из response.
+//11. Г‚Г»ГўГҐГ±ГІГЁ Гў ГЄГ®Г­Г±Г®Г«Гј 2-Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ Г°Г Г¬ГҐГІГ°Г  salary ГЇГ Г°Г Г¬ГҐГІГ° salary ГЁГ§ response.
 console.log(responseData.salary[2]);
 
-//12. Проверить, что 0-й элемент параметра salary равен salary из request (salary забрать из request.)
+//12. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® 0-Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ Г°Г Г¬ГҐГІГ°Г  salary Г°Г ГўГҐГ­ salary ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Element 0", function(){
     pm.expect(+responseData.salary[0]).to.eql(+requestData.salary);
 })
 
-//13. Проверить, что 1-й элемент параметра salary равен salary*2 из request (salary забрать из request.)
+//13. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® 1-Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ Г°Г Г¬ГҐГІГ°Г  salary Г°Г ГўГҐГ­ salary*2 ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Element 1", function(){
     pm.expect(+responseData.salary[1]).to.eql(2 * +requestData.salary);
 })
 
-//14. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)
+//14. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® 2-Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ Г°Г Г¬ГҐГІГ°Г  salary Г°Г ГўГҐГ­ salary*3 ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("Element 2", function(){
     pm.expect(+responseData.salary[2]).to.eql(3 * +requestData.salary);
 })
 
-// 15. Создать в окружении переменную name
-// 16. Создать в окружении переменную age
-// 17. Создать в окружении переменную salary
-// 18. Передать в окружение переменную name
+// 15. Г‘Г®Г§Г¤Г ГІГј Гў Г®ГЄГ°ГіГ¦ГҐГ­ГЁГЁ ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ name
+// 16. Г‘Г®Г§Г¤Г ГІГј Гў Г®ГЄГ°ГіГ¦ГҐГ­ГЁГЁ ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ age
+// 17. Г‘Г®Г§Г¤Г ГІГј Гў Г®ГЄГ°ГіГ¦ГҐГ­ГЁГЁ ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ salary
+// 18. ГЏГҐГ°ГҐГ¤Г ГІГј Гў Г®ГЄГ°ГіГ¦ГҐГ­ГЁГҐ ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ name
 pm.environment.set("name", responseData.name);
-// 19. Передать в окружение переменную age
+// 19. ГЏГҐГ°ГҐГ¤Г ГІГј Гў Г®ГЄГ°ГіГ¦ГҐГ­ГЁГҐ ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ age
 pm.environment.set("age", responseData.age);
-// 20. Передать в окружение переменную salary
+// 20. ГЏГҐГ°ГҐГ¤Г ГІГј Гў Г®ГЄГ°ГіГ¦ГҐГ­ГЁГҐ ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ salary
 pm.environment.set("salary", responseData.salary[0]);
 
 
-//21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
+//21. ГЌГ ГЇГЁГ±Г ГІГј Г¶ГЁГЄГ« ГЄГ®ГІГ®Г°Г»Г© ГўГ»ГўГҐГ¤ГҐГІ Гў ГЄГ®Г­Г±Г®Г«Гј ГЇГ® ГЇГ®Г°ГїГ¤ГЄГі ГЅГ«ГҐГ¬ГҐГ­ГІГ» Г±ГЇГЁГ±ГЄГ  ГЁГ§ ГЇГ Г°Г Г¬ГҐГІГ°Г  salary.
 for (let i = 0; i < 3; i++){
     console.log(+responseData.salary[i]);
 }
@@ -181,94 +181,90 @@ __________________
 
 http://162.55.220.72:5005/user_info_2
 
-// 1. Вставить параметр salary из окружения в request
-// 2. Вставить параметр age из окружения в age
-// 3. Вставить параметр name из окружения в name
-// 4. Отправить запрос.
-// 5. Статус код 200
-// 6. Спарсить response body в json.
+// 1. Г‚Г±ГІГ ГўГЁГІГј ГЇГ Г°Г Г¬ГҐГІГ° salary ГЁГ§ Г®ГЄГ°ГіГ¦ГҐГ­ГЁГї Гў request
+// 2. Г‚Г±ГІГ ГўГЁГІГј ГЇГ Г°Г Г¬ГҐГІГ° age ГЁГ§ Г®ГЄГ°ГіГ¦ГҐГ­ГЁГї Гў age
+// 3. Г‚Г±ГІГ ГўГЁГІГј ГЇГ Г°Г Г¬ГҐГІГ° name ГЁГ§ Г®ГЄГ°ГіГ¦ГҐГ­ГЁГї Гў name
+// 4. ГЋГІГЇГ°Г ГўГЁГІГј Г§Г ГЇГ°Г®Г±.
+// 5. Г‘ГІГ ГІГіГ± ГЄГ®Г¤ 200
+// 6. Г‘ГЇГ Г°Г±ГЁГІГј response body Гў json.
 var responseData = pm.response.json();
 
-// 7. Спарсить request.
+// 7. Г‘ГЇГ Г°Г±ГЁГІГј request.
 var requestData = request.data;
 
-//8. Проверить, что json response имеет параметр start_qa_salary
+//8. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® json response ГЁГ¬ГҐГҐГІ ГЇГ Г°Г Г¬ГҐГІГ° start_qa_salary
 pm.test("Have start_qa_salary", function () {
      pm.expect(responseData).to.property("start_qa_salary");
 });
 
-// 9. Проверить, что json response имеет параметр qa_salary_after_6_months
+// 9. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® json response ГЁГ¬ГҐГҐГІ ГЇГ Г°Г Г¬ГҐГІГ° qa_salary_after_6_months
 pm.test("Have qa_salary_after_6_months", function () {
     pm.expect(responseData).to.property("qa_salary_after_6_months");
 });
 
-// 10. Проверить, что json response имеет параметр qa_salary_after_12_months
+// 10. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® json response ГЁГ¬ГҐГҐГІ ГЇГ Г°Г Г¬ГҐГІГ° qa_salary_after_12_months
 pm.test("Have qa_salary_after_12_months", function () {
     pm.expect(responseData).to.property("qa_salary_after_12_months");
 });
 
-// 11. Проверить, что json response имеет параметр qa_salary_after_1.5_year
+// 11. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® json response ГЁГ¬ГҐГҐГІ ГЇГ Г°Г Г¬ГҐГІГ° qa_salary_after_1.5_year
 pm.test("Have qa_salary_after_1.5_year", function () {
     pm.expect(responseData).to.property("qa_salary_after_1.5_year");
 });
 
-// 12. Проверить, что json response имеет параметр qa_salary_after_3.5_years
+// 12. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® json response ГЁГ¬ГҐГҐГІ ГЇГ Г°Г Г¬ГҐГІГ° qa_salary_after_3.5_years
 pm.test("Have qa_salary_after_3.5_years", function () {
     pm.expect(responseData).to.property("qa_salary_after_3.5_years");
 });
 
-// 13. Проверить, что json response имеет параметр person
+// 13. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® json response ГЁГ¬ГҐГҐГІ ГЇГ Г°Г Г¬ГҐГІГ° person
 pm.test("Have person", function () {
     pm.expect(responseData).to.property("person");
 });
 
-// 14. Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request.)
+// 14. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° start_qa_salary Г°Г ГўГҐГ­ salary ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("requestData.salary = start_qa_salary", function () {
     pm.expect(+requestData.salary).to.eql(+responseData.start_qa_salary);
 });
 
-// 15. Проверить, что параметр qa_salary_after_6_months равен salary*2 из request (salary забрать из request.)
+// 15. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° qa_salary_after_6_months Г°Г ГўГҐГ­ salary*2 ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("requestData.salary*2 = qa_salary_after_6_months", function () {
     pm.expect(+requestData.salary * 2).to.eql(+responseData.qa_salary_after_6_months);
 });
 
-// 16. Проверить, что параметр qa_salary_after_12_months равен salary*2.7 из request (salary забрать из request.)
+// 16. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° qa_salary_after_12_months Г°Г ГўГҐГ­ salary*2.7 ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("requestData.salary*2.7 = qa_salary_after_12_months", function () {
     pm.expect(+requestData.salary * 2.7).to.eql(+responseData.qa_salary_after_12_months);
 });
 
-// 17. Проверить, что параметр qa_salary_after_1.5_year равен salary*3.3 из request (salary забрать из request.)
+// 17. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° qa_salary_after_1.5_year Г°Г ГўГҐГ­ salary*3.3 ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("requestData.salary*3.3 = qa_salary_after_1.5_year", function () {
     pm.expect(+requestData.salary * 3.3).to.eql(+responseData["qa_salary_after_1.5_year"]);
 });
 
-// 18. Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.)
+// 18. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° qa_salary_after_3.5_years Г°Г ГўГҐГ­ salary*3.8 ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("requestData.salary*3.3 = qa_salary_after_3.5_years", function () {
     pm.expect(+requestData.salary * 3.8).to.eql(+responseData["qa_salary_after_3.5_years"]);
 });
 
-// 19. Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.)
+// 19. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® Гў ГЇГ Г°Г Г¬ГҐГІГ°ГҐ person, 1-Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЁГ§ u_name Г°Г ГўГҐГ­ salary ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("responseData.person.u_name[1] = requestData.salary", function () {
     pm.expect(+responseData.person.u_name[1]).to.eql(+requestData.salary);
 });
 
-// 20. Проверить, что что параметр u_age равен age из request (age забрать из request.)
+// 20. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° u_age Г°Г ГўГҐГ­ age ГЁГ§ request (age Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("responseData.person.u_name[1] = requestData.salary", function () {
     pm.expect(+responseData.person.u_age).to.eql(+requestData.age);
 });
 
-// 21. Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.)
+// 21. ГЏГ°Г®ГўГҐГ°ГЁГІГј, Г·ГІГ® ГЇГ Г°Г Г¬ГҐГІГ° u_salary_5_years Г°Г ГўГҐГ­ salary*4.2 ГЁГ§ request (salary Г§Г ГЎГ°Г ГІГј ГЁГ§ request.)
 pm.test("responseData.person.u_name[1] = requestData.salary", function () {
     pm.expect(+responseData.person.u_salary_5_years).to.eql(+requestData.salary * 4.2);
 });
 
-// 22. ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
+// 22. ***ГЌГ ГЇГЁГ±Г ГІГј Г¶ГЁГЄГ« ГЄГ®ГІГ®Г°Г»Г© ГўГ»ГўГҐГ¤ГҐГІ Гў ГЄГ®Г­Г±Г®Г«Гј ГЇГ® ГЇГ®Г°ГїГ¤ГЄГі ГЅГ«ГҐГ¬ГҐГ­ГІГ» Г±ГЇГЁГ±ГЄГ  ГЁГ§ ГЇГ Г°Г Г¬ГҐГІГ°Г  person.
 let totalElements  = Object.keys(responseData.person).length;
 let personData = Object.keys(responseData.person);
 for (let i = 0; i < totalElements; ++i) {
     console.log(personData[i]);
 }
-
-
-
-
