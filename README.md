@@ -1,17 +1,19 @@
 # Portfolio
+В данном репозитории располагаются работы, демонстрирующие мои знания, умения и навыки в различных сфера IT.
+
+---
+
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/intellij/intellij-original.svg" title="IntelliJ IDEA" alt="IntelliJ IDEA" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/gitlab/gitlab-original-wordmark.svg" title="GitLab" alt="GitLab" width="40" height="40"/>&nbsp;
 </div>
 
-В данном репозитории располагаются работы, демонстрирующие мои знания, умения и навыки в различных сфера IT.
-
 В папке Java-Skillbox - представлены мои работы по выполнению задач в курсе Java-разработчик в Skillbox. Работа велась с использованием репозитория GitLab.
 
 В рамках пройденного материала выполнялись работы по темам:
 
-3 - Синтаксис языка Java (циклы for и while).
+3 - Синтаксис языка Java (переменные, циклы for и while).
 
 4 - Классы, конструкторы и методы. Создание методов с различными наборами параметров. Создание объектов на основе созданных классов.
 
